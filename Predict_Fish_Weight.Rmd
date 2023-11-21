@@ -1,7 +1,7 @@
 ---
 title: "Weight of Fish"
-author: "Your Name"
-date: "`r Sys.Date()`"  
+author: "leia"
+date: "`fall2023`"  
 output: 
   html_document:
     number_sections: true
@@ -15,15 +15,37 @@ output:
 
 ```{r include=FALSE,echo=FALSE}
 require(tigerstats)
-require(tidyverse)
+require(tidyverse) 
+library(dplyr) 
+library(leaps) 
+fish = read_csv("Fish.csv")
 ```
 
 # Predicting Fish Weight
 
+Find the best model using two variables to predict perch weight, and compare this to the best overall model. 
 
 ## Perch
 
+```{r}
+perch = filter(fish, Species == "Perch")
+```
+
+
+```{r}
+modelPerch = regsubsets(Weight ~ Length1 + Length2 + Length3 + Height + Width, data = perch)
+summary(modelPerch)
+```
+
+```{r}
+best2Perch = lm(Weight ~ Height + Width, data = perch)
+summary(best2Perch)
+```
+
+### beat 2-Error in numeric(nbest * nvmax) : vector size cannot be infinita √ariable
+
 ### Best Models
+
 
 ### Best Two regressor model
 
