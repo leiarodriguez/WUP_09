@@ -88,4 +88,4 @@ weight = -319.118 + 8.278*Length3 + 72.300*Width
 
 ## Final Summary Statements 
 
-The best model using two variables to predict perch is Weight = -536 + 74.77*Height + 69.62*Width. the best model using two variables to predict Pike is weight = -1675.79 + -105.64*Length1 + 141.25*Length3. the best model using two variables to predict roach is weight = -319.118 + 8.278*Length3 + 72.300*Width.  
+The best model using two variables to predict perch is Weight = -536 + 74.77*Height + 69.62*Width. the best model using two variables to predict Pike is weight = -1675.79 + -105.64*Length1 + 141.25*Length3. the best model using two variables to predict roach is weight = -319.118 + 8.278*Length3 + 72.300*Width.   
