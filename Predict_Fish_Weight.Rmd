@@ -31,30 +31,33 @@ Find the best model using two variables to predict perch weight, and compare thi
 perch = filter(fish, Species == "Perch")
 ```
 
+### Best Two regressor model
 
 ```{r}
 modelPerch = regsubsets(Weight ~ Length1 + Length2 + Length3 + Height + Width, data = perch)
 summary(modelPerch)
 ```
 
+
 ```{r}
 best2Perch = lm(Weight ~ Height + Width, data = perch)
 summary(best2Perch)
 ```
-
-### beat 2-Error in numeric(nbest * nvmax) : vector size cannot be infinita √ariable
-
-### Best Models
-
-
-### Best Two regressor model
+## best 2-variable equation
+Weight = -536 + 74.77*Height + 69.62*Width 
 
 
 ## Pike
+```{r}
+pike = filter(fish, Species == "Pike")
+```
 
-### Best Models
 
 ### Best Two regressor model
+```{r}
+modelPike = regsubsets(Weight ~ Length1 + Length2 + Length3 + Height + Width, data = pike) 
+summary(modelPike)
+```
 
 ## Roach
 
